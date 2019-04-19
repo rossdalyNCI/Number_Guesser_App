@@ -15,3 +15,11 @@ const game = document.querySelector('#game'),
 // Assign UI min and max
 minNum.textContent = min;
 maxNum.textContent = max;
+
+// Listen for guess
+guessBtn.addEventListener('click', function(){ // listen for a click and then we want to call a function
+    let guess = parseInt(guessInput.value); // parsing the value as an integer
+    console.log(guess);
+    // Validate
+
+});
