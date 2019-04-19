@@ -19,7 +19,14 @@ maxNum.textContent = max;
 // Listen for guess
 guessBtn.addEventListener('click', function(){ // listen for a click and then we want to call a function
     let guess = parseInt(guessInput.value); // parsing the value as an integer
-    console.log(guess);
+    
     // Validate
-
+    if(isNaN(guess) || guess < min || guess > max){ // if guess is equal to Not a Number or its less than the min or greater than the max
+        setMessage(`Please enter a number between ${min} and ${max}`);
+    }
 });
+
+// Set Message
+function setMessage(msg){
+    message.textContent = msg;
+}
