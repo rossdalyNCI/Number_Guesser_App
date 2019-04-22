@@ -63,6 +63,8 @@ function gameOver(won, msg){
     guessInput.disabled = true;
     // Change border color
     guessInput.style.borderColor = color; // defined above on whether a user won or not
+    // Set text color
+    message.style.color = color;
     // Set message
     setMessage(msg); // msg passed in
 }
