@@ -16,6 +16,13 @@ const game = document.querySelector('#game'),
 minNum.textContent = min;
 maxNum.textContent = max;
 
+// Play again event listener
+game.addEventListener('click', function(e){
+    if(e.target.classNme === 'play-again'){
+        window.location.reload(); // if e.target className is equal to the class of 'play-again' then reload the page
+    }
+});
+
 // Listen for guess
 guessBtn.addEventListener('click', function(){ // listen for a click and then we want to call a function
     let guess = parseInt(guessInput.value); // parsing the value as an integer
