@@ -33,6 +33,17 @@ guessBtn.addEventListener('click', function(){ // listen for a click and then we
         guessInput.style.borderColor = 'green';
         // Set message
         setMessage(`${winningNum} is correct, YOU WIN!`, 'green');
+
+    } else {
+        // Wrong number
+        guessesLeft -= 1; // same as putting guessesLeft = guessesLeft - 1
+
+        if(guessesLeft === 0){
+            // Game over - lost
+
+        } else {
+            // Game continues - answer wrong
+        }
     }
 });
 
