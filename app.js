@@ -82,7 +82,7 @@ function gameOver(won, msg){
 
 // Get Winning Number
 function getRandomNum(min, max){
-    return Math.floor(Math.random()*(max-min+1)+min);
+    return Math.floor(Math.random()*(max-min+1)+min); // round number with Math floor
 }
 
 // Set Message
