@@ -1,7 +1,7 @@
 // Game Values
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min, max),
     guessesLeft = 3;
 
 // UI Elements
@@ -18,7 +18,7 @@ maxNum.textContent = max;
 
 // Play again event listener
 game.addEventListener('mousedown', function(e){
-    if(e.target.classNme === 'play-again'){
+    if(e.target.className === 'play-again'){
         window.location.reload(); // if e.target className is equal to the class of 'play-again' then reload the page
     }
 });
@@ -78,6 +78,11 @@ function gameOver(won, msg){
     // Play Again?
     guessBtn.value = 'Play Again';
     guessBtn.className += 'play-again'; // will append the class name of 'play-again' to guessBtn
+}
+
+// Get Winning Number
+function getRandomNum(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
 
 // Set Message
